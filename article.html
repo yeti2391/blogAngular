@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquetacion</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+   
+</head>
+<body>
+    <header id="header">
+        <div class="center">
+            <!-- LOGO -->
+            <div id="logo">
+                <img src="assets/img/angular.svg" class="app-logo" alt="logotipo" />
+                <span id="brand">
+                    <strong>Curso</strong>Angular
+                </span>
+            </div>
+            <!-- MENU -->  
+            <nav id="menu">
+                <ul>
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="blog.html">Blog</a>
+                    </li>
+                    <li>
+                        <a href="formulario.html">Formulario</a>
+                    </li>
+                    <li>
+                        <a href="#">Pag1</a>
+                    </li>
+                    <li>
+                        <a href="#">Pag2</a>
+                    </li>
+                </ul>
+            </nav> 
+        </div>
+        <!-- LIMPIAR FLOTADOS-->
+        <div class="clearfix"></div>
+    </header>
+  
+    
+
+    <div class="center">
+        <section id="content">
+             
+            <!-- Se saca el script, subheader y articulos  -->
+ 
+                <!--Listado articulos-->
+                <article class="article-detail">
+                    <div class="image-wrap">
+                        <img src="https://3.bp.blogspot.com/-ROJjfNjWG5w/Tw6DeQ01kJI/AAAAAAAAGeU/dmw05kIv4wA/s1600/red_pallovnik%2Bcastleinengland.jpg" alt="castillo">
+                    </div>
+
+
+                    <h1 class="subheader">Articulo de prueba</h1>
+                    <span class="date">
+                        hace 5 minutos
+                    </span>
+                        <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet odio natus expedita, accusantium magnam cupiditate sint neque sit nihil excepturi explicabo animi nisi praesentium eligendi unde mollitia, tenetur ipsam quos.</p>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro est culpa corrupti molestias aperiam vel, dolorum atque suscipit nostrum temporibus obcaecati aspernatur accusamus maiores! Voluptas perferendis iste magni veniam enim.</p>
+                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor aliquid qui autem voluptatem illo. Est doloremque vero voluptas quae, vel reprehenderit repellat, ipsa architecto recusandae eveniet autem eius ad laudantium!</p>
+                    <div class="clearfix"></div>
+                </article>
+                
+
+        </section>
+<!-- Bucle para mostrar todos el listado de articulos se encuentra en el head-->
+
+
+        <!--sidebar-->
+        <aside id="sidebar">
+            <div id="nav-blog" class="sidebar-item">
+                <h3>Puedes hacer esto</h3>
+                <a href="#" class="btn btn-success">Crear articulo</a>
+            </div>
+            <div id="search" class="sidebar-item">
+                <h3>Buscador</h3>
+                <p>Encuentra el articulo que buscas...</p>
+                <form action="">
+                    <input type="text" name="search" />
+                    <input type="submit" name="submit" value="buscar" class="btn">
+                </form>
+            </div>
+        </aside>
+        <div class="clearfix"></div>
+    </div>
+
+    <!--FOOTER -->
+    <footer id="footer">
+        <div class="center">
+            <p>
+                &copy; Curso master en Frameworks para JS
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

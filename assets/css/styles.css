@@ -1,0 +1,425 @@
+body{
+    text-align: center;
+    background: sienna;
+    margin: 0px;
+    padding: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased;
+
+}
+
+#header{
+    height: 120px;
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid #ccc;
+    border-top: 3px solid #f13e3e;
+}
+
+#logo{
+    width: 30%;
+    font-size: 30px;
+    float: left;
+    margin-top: 30px;
+}
+
+#logo img{
+    display: block;
+    float: left;
+    height: 60px;
+    margin-top: -10px;
+    animation: latir infinite 2s linear;
+}
+@keyframes latir {
+    0%{
+        transform: scale(1,1);
+    } 
+    50%{
+        transform: scale(1.02,1.02);
+    }
+    55%{
+        transform: scale(0.95,0.95);
+    }
+    
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+#brand{
+    display: block;
+    margin: 0px;
+    float: left;
+}
+
+#menu{
+    width: 70%;
+    float: right;
+    font-size: 12px;
+
+}
+
+#menu ul{
+    line-height: 85px;
+    width: 60%;
+    float: right;
+}
+
+#menu ul li{
+    display: inline-block;
+    list-style: none;
+    height: 45px;
+    margin: 0px 15px;
+}
+
+#menu a{
+    text-decoration: none;
+    color: #444;
+    transition: 300ms all;
+}
+
+#menu a:hover{
+    color: #f13e3e;
+}
+
+#slider{
+    width: 100%;
+    height: 360px;
+    /*line-height: 320px;*/
+    color: white;
+    text-shadow: 0px 0px 5px #444;
+    background-color: #0093E9;
+    
+    /* DEGRADADO CSS*/
+    background: rgba(248,80,50,1);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(248,80,50,1) 0%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 86%, rgba(231,56,39,1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(248,80,50,1)), color-stop(51%, rgba(246,41,12,1)), color-stop(86%, rgba(240,47,23,1)), color-stop(100%, rgba(231,56,39,1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(248,80,50,1) 0%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 86%, rgba(231,56,39,1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(248,80,50,1) 0%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 86%, rgba(231,56,39,1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(248,80,50,1) 0%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 86%, rgba(231,56,39,1) 100%);
+    background: radial-gradient(ellipse at center, rgba(248,80,50,1) 0%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 86%, rgba(231,56,39,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827', GradientType=1 );
+}
+
+#slider h1{
+    margin: 0px;
+    /*si en firefox da problema se puede solucionr cambiando margin por margin: 0.2px; */
+    padding-top: 150px;
+    text-align: center;
+}
+
+.btn-white{
+    display: block;
+    color: #444;
+    background: white;
+    padding: 10px;
+    width: 150px;
+    height: 35;
+    margin: 25px auto;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-shadow: none;
+    text-decoration: none;
+    line-height: 35px;
+    box-shadow: 0px 0px 5px #444;
+    border-radius: 5px;
+    transition: 300ms all;
+}
+
+.btn-white:hover{
+    background: #444;
+    color: white;
+}
+
+.center{
+    width: 75%;
+    margin: 0px auto;
+}
+
+.clearfix{
+    clear: both;
+    float: none;
+}
+
+#slider.slider-sm{
+    height: 150px;
+}
+
+#slider.slider-sm h1{
+    margin: 0px;
+    /*si en firefox da problema se puede solucionr cambiando margin por margin: 0.2px; */
+    padding: 55px 0px;
+    text-align: center;
+}
+
+#content{
+    width: 70%;
+    float: left;
+    min-height: 650px;
+    margin-right: 20px;
+}
+
+#sidebar{
+    width: 25%;
+    float: left;
+}
+
+.sidebar-item{
+    background: #f7f7f7;
+    padding: 25px;
+    margin-top: 30px;
+}
+
+.sidebar-item h3{
+    text-transform: uppercase;
+    font-size: 19px;
+    margin: 0px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #eee;
+}
+
+.sidebar-item .btn{
+    margin-top: 10px;
+    margin: 0px auto;
+}
+
+.btn{
+    display: block;
+    background: black;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-decoration: none;
+    max-width: 120px;
+    transition: 300ms all;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-success{
+    background: rgb(35, 212, 19);
+    
+}
+.btn-success:hover{
+    background: #444;
+}
+
+.mid-form{
+    width: 50%;
+    margin: 0px auto;
+}
+
+.mid-form label{
+    display: block;
+    float: left;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 17px;
+}
+
+input[type="text"], textarea{
+    width: 100%;
+    min-height: 30px;
+    border: 1px solid #444;
+    padding: 5px;
+    margin-bottom: 5px;
+    transition: 300ms all;
+}
+
+input[type="text"]:focus, textarea{
+    box-shadow: 0px 0px 3px #ccc inset;
+}
+
+textarea{
+    width: 100%;
+    height: 150px;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 150px;
+    max-height: 300px;
+}
+
+.radiobuttons{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    float: left;
+}
+
+#footer{
+    background: #f7f7f7;
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    color: #444;
+}
+
+#footer p{
+    margin: 0px;
+    padding: 0px;
+}
+
+.article-item {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: left;
+}
+
+.article-item .image-wrap{
+    width: 130px;
+    height: 130px;
+    overflow: hidden;
+    float:left;
+    margin-right: 15px;
+    border: 1px solid #ccc;
+}
+
+.article-item .image-wrap img{
+    height: 100%;
+    text-align: center;
+}
+
+.article-item .image-wrap h2{
+    display:block;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 7px;
+}
+
+.article-item .date{
+    display: block;
+    width: 100%;
+    color: #444;
+}
+
+.article-item a{
+    display: block;
+    color: #444;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.article-item a:hover{
+    text-decoration: underline;
+}
+
+.subheader{
+    font-size: 38px;
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+}
+
+.article-detail .image-wrap{
+    float: none;
+    width: 100%;
+    height: 300px;
+    
+}
+
+.article-detail .image-wrap img{
+    height: 300px;
+    padding: 10px;
+}
+
+.article-detail .subheader{
+    margin-top: 15px;
+    margin-bottom: 0px;
+    border: none;
+}
+
+/* RESPONSIVE */
+
+/* Desd el ancho 0px hasta 1488px de pantalla se ejecutaran los siguientes estilos*/
+@media (max-width: 1086px){
+    .center {
+        width: 85%;
+    }
+}
+
+
+
+@media (max-width: 960px){
+    #logo{
+        width: 265px;
+    }
+    #menu, #menu ul{
+        
+        width: auto;
+        margin-top: 20px;
+        padding: 0px;
+        line-height: 43px;
+   }
+}
+@media (max-width: 796px){
+     #logo{
+        float: none;
+        
+        margin: 0px auto;
+        margin-top: 20px;
+    }
+    #menu, #menu ul{
+         clear: both;
+         float: none;
+         width: 100%;
+         margin: 0px;
+         padding: 0px;
+         line-height: 43px;
+    }
+    #content{
+        float: none;
+        width: 100%;
+    }
+    #sidebar{
+        float: none;
+        width: 60%;
+        margin: 0px auto;
+        margin-bottom: 50px;
+    }
+    #slider h1{
+        padding-top: 115px;
+        font-size: 25px;
+    }
+    .mid-form{
+        width: 70%;
+    }
+}
+
+@media (max-width: 357px){
+   #header{
+       min-width: 130px;
+       overflow: hidden;
+   }
+
+   #menu, menu ul{
+       line-height: 50px;
+   }
+   #menu, menu ul li{
+    margin-left: 7px;
+    margin-right: 7px;
+    }
+    #slider{
+        height: 180px;
+    }
+    #slider h1{
+        font-size: 19px;
+        padding-top: 30px;
+    } 
+    #slider .btn-white{
+        margin-top: 20px;
+    }
+
+    #slider.slider-small{
+        height: 100px;
+    }
+    #slider.slider-small h1{
+        padding-top: 35px;
+    }
+}

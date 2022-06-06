@@ -1,0 +1,1 @@
+lo que se va a hacer es adaptar la maqueta de la pagina web que tengo para un proyecto en angular

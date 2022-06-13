@@ -15,9 +15,11 @@ app.use(bodyParser.json());
 
 // cors (peticiones frontend)
 
-// a;adir prefijos a rutas
+
+
 
 // Ruta o metodo de prueba para la api
+/* Esto fue copiado y pegado en controllers article.js
 app.get('/datos-curso', (req, res)=>{
     return res.status(200).send({
         curso: 'Master en Frameworks JS',
@@ -25,6 +27,14 @@ app.get('/datos-curso', (req, res)=>{
         url: 'victorrobles@web.es'
     })
 });
+LA RUTA ESTA DEFINIDO EN ROUTES AHORA
+*/
+// cargar ficheros rutas
+const article_routes = require('./routes/article')
+
+// a;adir prefijos a rutas
+app.use('/api', article_routes);
+
 
 // exportar modulo (fichero actual)
 module.exports = app;

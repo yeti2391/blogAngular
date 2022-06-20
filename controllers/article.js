@@ -155,6 +155,7 @@ const controller = {
         // recoger los datos que llegan por el put
         const params = req.body;
 
+
         // validar datos
         try {
             var validate_title = !validator.isEmpty(params.title);
@@ -191,10 +192,34 @@ const controller = {
                 status: 'error',
                 message: 'La validacion no es correcta'
             }); 
-        }
-       
+        }        
+    },
 
-        // devolver respuesta
+    delete: (req, res)=>{
+        // recoger el id de la url
+        const articleId = req.params.id;
+
+        // find and delete
+        Article.findOneAndDelete({_id: articleId}, (err, articleRemoved)=>{
+            if(err){
+                return res.status(500).send({
+                    status: 'error',
+                    message: 'Error al borrar'
+                }); 
+            }
+
+            if(!articleRemoved){
+                return res.status(404).send({
+                    status: 'error',
+                    message: 'No se ha borrado el articulo, posiblemente no exista'
+                }); 
+            }
+
+            return res.status(200).send({
+                status: 'success',
+                article: articleRemoved
+            });
+        });
 
         
     }

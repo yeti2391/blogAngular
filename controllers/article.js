@@ -88,7 +88,7 @@ const controller = {
 
     getArticles: (req, res)=>{
         //query
-        let query = Article.find({});
+        const query = Article.find({});
 
         const last = req.params.last; 
         if(last || last != undefined){
@@ -117,6 +117,38 @@ const controller = {
             });
         });
 
+    },
+
+    getArticle: (req, res) =>{
+        // tomar el id de la url
+        const articleId = req.params.id;
+
+        // comprobar que existe
+        if(!articleId || articleId == null){
+            return res.status(404).send({
+                status: 'error',
+                message: 'No existe el articulo!'
+            }); 
+        }
+        // buscar el articulo
+        Article.findById(articleId, (err, article)=>{
+            if(err || !article){
+                return res.status(404).send({
+                    status: 'error',
+                    message: 'No existe el articulo!'
+                }); 
+            }
+
+            // devolverlo en json
+            return res.status(200).send({
+                status: 'success',
+                article
+            }); 
+
+        });
+     
+
+          
     }
     
 };

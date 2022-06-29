@@ -219,9 +219,47 @@ const controller = {
                 status: 'success',
                 article: articleRemoved
             });
-        });
+        });    
+    },
+
+    upload: (req, res)=>{
+        // Configurar el modulo connect multiparty router/article.js (hecho)
+
+        // recoger el ficher de la peticion
+        const file_error = 'Imagen no subida';
+
+        if(!req.files){
+            return res.status(404).send({
+                status: 'error',
+                message: file_error
+            });
+        }
+
+        // conseguir el nombre y la extension del archivo
+        const file_path = req.files.file0.path;
+        const file_split = file_path.split('/');
+
+        //nombre del archivo
+        const file_name = file_split[2];
+        //extension del archivo
+        const extension_split = file_name.split('\.');2
+        const file_ext = extension_split[1];
+
+        // comprobar la extension, solo imagenes, si no es valida borrar el fihcero
+        if(file_ext != 'png' && file_ext != 'jpg' && file_ext != 'jpeg' && file_ext != 'gif'){
+            //borrar el archivo
+        } else{
+        // si es valido
+
+        // buscar el articulo, asignarle nombre de la imagen y actualizar
+        }
 
         
+        return res.status(404).send({
+            fichero: req.files,
+            split: file_split,
+            file_ext 
+        }); 
     }
     
 };

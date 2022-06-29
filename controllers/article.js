@@ -10,7 +10,8 @@
 
 const validator = require('validator');
 const Article = require('../models/article');
-
+const fs = require('fs');
+const path = require('path');
 
 
 const controller = {
@@ -247,20 +248,32 @@ const controller = {
 
         // comprobar la extension, solo imagenes, si no es valida borrar el fihcero
         if(file_ext != 'png' && file_ext != 'jpg' && file_ext != 'jpeg' && file_ext != 'gif'){
-            //borrar el archivo
+        //borrar el archivo si no cumple requisito de extensiones
+        fs.unlink(file_path, (err)=>{
+            return res.status(404).send({
+                status: 'error',
+                message: 'La extension de la imagen no es valida'
+            }); 
+        });
         } else{
-        // si es valido
-
-        // buscar el articulo, asignarle nombre de la imagen y actualizar
+            // si es valido, se saca id de la url
+            const articleId = req.params.id;
+            // buscar el articulo, asignarle nombre de la imagen y actualizar
+            Article.findOneAndUpdate({_id: articleId}, {image: file_name}, {new:true}, (err, articleUpdated)=>{
+                if(err || !articleUpdated){
+                    return res.status(200).send({
+                        status: 'error',
+                        message: 'Error al guardar la imagen del articulo'
+                    });  
+                }
+               
+                return res.status(200).send({
+                    status: 'success',
+                    article: articleUpdated
+                }); 
+            });
         }
-
-        
-        return res.status(404).send({
-            fichero: req.files,
-            split: file_split,
-            file_ext 
-        }); 
-    }
+    },//end upload file
     
 };
 

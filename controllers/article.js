@@ -12,6 +12,7 @@ const validator = require('validator');
 const Article = require('../models/article');
 const fs = require('fs');
 const path = require('path');
+const { exists } = require('../models/article');
 
 
 const controller = {
@@ -274,6 +275,22 @@ const controller = {
             });
         }
     },//end upload file
+
+    getImage: (req, res) =>{
+        const file = req.params.image;
+        const path_file = './upload/articles/'+ file;
+
+        fs.exists(path_file, (exists)=>{
+            if(exists){
+                return res.sendFile(path.resolve(path_file));
+            }else {
+                return res.status(404).send({
+                    status: 'error',
+                    message: 'La imagen no existe' 
+                }); 
+            }
+        });         
+    },
     
 };
 

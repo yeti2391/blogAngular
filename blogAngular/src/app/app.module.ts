@@ -5,11 +5,13 @@ import { AppComponent } from './app.component';
 
 //Mis import
 import { MiComponente } from './components/mi-componente/mi-componente.component';
+import { PeliculasComponent } from './components/peliculas/peliculas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MiComponente
+    MiComponente,
+    PeliculasComponent
   ],
   imports: [
     BrowserModule

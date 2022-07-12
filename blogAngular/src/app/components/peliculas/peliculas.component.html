@@ -1,1 +1,28 @@
 <h1 class="subheader">Peliculas</h1>
+
+<hr>
+<h2>Numero de peliculas almacenadas: {{peliculas.length}}</h2>
+
+<div *ngIf="peliculas.length <=3"> Hay pocas peliculas en el sistema</div>
+<div *ngIf="peliculas.length >3">Hay muchas peliculas en el sistema</div>
+
+<hr>
+
+<h2 class="subheader">Listado de peliculas:</h2>
+<div id="articles" *ngIf="peliculas">
+    <!--Listado articulos-->
+    <article class="article-item" *ngFor="let pelicula of peliculas; let i=index;">
+        <div class="image-wrap">
+            <img src="{{pelicula.image}}" alt="{{pelicula.title}}" />
+        </div>
+
+
+        <h2>{{i+1}}. {{pelicula.title}}</h2>
+        <span class="date">
+            hace 5 minutos
+        </span>
+        <a href="#">Leer mas</a>
+
+        <div class="clearfix"></div>
+    </article>    
+</div>

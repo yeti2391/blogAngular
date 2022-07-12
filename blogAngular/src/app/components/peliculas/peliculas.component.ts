@@ -11,9 +11,9 @@ export class PeliculasComponent implements OnInit {
 
   constructor() { 
     this.peliculas=[
-      {title: 'Spiderman', image:'https://wallpapercave.com/dwp1x/OsrCGAo.jpg'},
-      {title: 'Avengers End Game', image:'https://images.wallpapersden.com/image/wxl-poster-of-avengers-endgame-movie_63830.jpg'},
-      {title: 'The batman', image:'https://www.soctex.com/wp-content/uploads/2021/07/The-Batman-2022.jpg'}
+      {year: 2002, title: 'Spiderman', image:'https://wallpapercave.com/dwp1x/OsrCGAo.jpg'},
+      {year: 2019, title: 'Avengers End Game', image:'https://buzz.tt/assets/media/movies/2384/2384_bgslds.jpg'},
+      {year: 2022, title: 'The batman', image:'https://www.soctex.com/wp-content/uploads/2021/07/The-Batman-2022.jpg'}
     ];
   }
 

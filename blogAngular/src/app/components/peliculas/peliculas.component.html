@@ -18,8 +18,16 @@
 
 
         <h2>{{i+1}}. {{pelicula.title}}</h2>
-        <span class="date">
-            hace 5 minutos
+        <!--
+            <span class="year" [style.background]="pelicula.year > 2016 ? 'green' : 'red' ">
+                {{pelicula.year}}
+            </span>
+        -->
+        <span class="year" [ngClass]="{ 
+            'year-green':pelicula.year > 2016,
+            'year-red':pelicula.year <= 2016
+        }">
+           {{pelicula.year}}
         </span>
         <a href="#">Leer mas</a>
 
